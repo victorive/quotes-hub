@@ -3,6 +3,10 @@ const quoteContainer = document.getElementById('quote-container');
 const loadingContainer = document.getElementById('loading-container');
 
 async function fetchQuotes() {
+    const headers = {
+        'Content-Type': 'application/json',
+    };
+
     const loading = document.createElement('div');
     loading.className = 'w-full text-center bg-white px-4 py-2';
     const loadingText = document.createElement('span');
@@ -11,18 +15,20 @@ async function fetchQuotes() {
     loadingContainer.appendChild(loading);
 
     try {
-        const response = await fetch('/api/v1/quotes');
+        const response = await fetch('/api/v1/quotes', {
+            method: 'GET',
+            headers
+        });
         const dataObj = await response.json();
         const quotesArray = dataObj.data;
         if (Array.isArray(quotesArray)) {
             quoteContainer.innerHTML = '';
             quotesArray.forEach((quote) => {
                 const quoteElement = document.createElement('div');
-                quoteElement.className = 'mb-4 bg-gray-100 rounded-lg p-8';
+                quoteElement.className = 'mb-4 bg-gray-100 rounded-lg p-4';
                 quoteElement.innerHTML = `
-                    <p class="mb-2 text-sm text-gray-600 text-left">Kanye West once said -</p>
                     <p class="mb-2 mb-4"><b>"${quote.quote}"</b></p>
-                    <span class="copy-svg cursor-pointer">
+                    <span class="copy-svg cursor-pointer text-right">
                         ${getCopyIconHtml()}
                     </span>
                 `;

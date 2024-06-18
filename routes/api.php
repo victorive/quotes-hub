@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/quotes', [QuoteController::class, 'getQuotes']);
+Route::get('/quotes', [QuoteController::class, 'getQuotes'])->name('api.quotes');

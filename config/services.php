@@ -30,4 +30,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'kanye_west' => [
+        'base_url' => env('KANYE_WEST_BASE_URL', 'https://api.kanye.rest'),
+        'quote_limit' => env('KANYE_WEST_QUOTE_LIMIT', 5),
+    ]
+
 ];

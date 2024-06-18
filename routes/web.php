@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\V1\Web\Auth\LoginController;
+use App\Http\Controllers\V1\Web\Auth\LogoutController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +14,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [LoginController::class, 'getLoginForm'])->name('login');
 
-Route::get('/', function () {
-    return view('index');
+Route::get('/quotes', function () {
+    return view('quotes');
+})->name('quotes')->middleware('auth');
+
+Route::prefix('auth')->group(function () {
+    Route::post('/login', [LoginController::class, 'login'])->name('auth.login');
+    Route::post('/logout', LogoutController::class)->name('auth.logout')->middleware('auth');
 });

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\V1\QuoteController;
+use App\Http\Controllers\V1\Api\QuoteController;
 use Illuminate\Support\Facades\Route;
 
 /*

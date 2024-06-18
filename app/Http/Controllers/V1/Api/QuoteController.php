@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\V1;
+namespace App\Http\Controllers\V1\Api;
 
 use App\Http\Controllers\Controller;
 use App\Services\V1\QuoteService;

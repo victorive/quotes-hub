@@ -22,7 +22,7 @@
 
 **Step 7:** Run `cp .env .env.testing` to create the .env file for the testing environment.
 
-**Step 8:** Create a database with the name **quotes-hub** or any name of your choice in your current database
+**Step 8:** Create a database with the name `quotes_hub` or any name of your choice in your current database
 server and configure the DB_DATABASE, DB_USERNAME and DB_PASSWORD credentials respectively, in the .env files located in
 the project’s root folder. eg.
 

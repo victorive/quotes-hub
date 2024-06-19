@@ -35,6 +35,7 @@ the project’s root folder. eg.
 **Step 9:** Update the .env file with the following configurations:
 
 > KANYE_WEST_BASE_URL=https://api.kanye.rest
+> 
 > KANYE_WEST_QUOTE_LIMIT=5
 
 **Step 10:** Run `php artisan migrate` to create your database tables.

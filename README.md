@@ -47,5 +47,12 @@ the project’s root folder. eg.
 **Step 13:** Serve the application by running `php artisan serve`. This will start a development server,
 and you can access the application by visiting http://localhost:8000 or using the link generated in your web browser.
 
-**Step 14:** To run the test suites, make sure you have configured the testing environment using the `.env.testing` file
+**Step 14:** To access the auth protected routes, please use the following credentials:
+
+**User:**
+
+- Email: user@example.com
+- Password: password
+
+**Step 15:** To run the test suites, make sure you have configured the testing environment using the `.env.testing` file
 generated earlier in `Step 7`, then run `php artisan test` to test.

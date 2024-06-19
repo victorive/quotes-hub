@@ -42,7 +42,7 @@ the project’s root folder. eg.
 
 **Step 11:** Run `php artisan db:seed` seed the database with the default user details.
 
-**Step 12:** Run `npm run build` to compile your frontend assets.
+**Step 12:** Run `npm run dev` to compile your frontend assets.
 
 **Step 13:** Serve the application by running `php artisan serve`. This will start a development server,
 and you can access the application by visiting http://localhost:8000 or using the link generated in your web browser.
